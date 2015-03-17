@@ -1,3 +1,4 @@
+
 <html>
 <body>
 
@@ -5,7 +6,9 @@
 
 var array2=[[3,2,1],[1,2,3]];
 var array11=[[0,0,0],[0,0,0]];
-var array33=[[0,0],[0,0]];
+var array33=new Array();
+array33[0]=new Array(2);
+array33[1]=new Array(2);
 var array22=new Array();
 array22[0]=new Array(2);
 array22[1]=new Array(2);
@@ -53,19 +56,14 @@ document.writeln("<br/><br/>d:<br/>");
 
 for (var i=0;i<array2.length ;i++ )
         {
-for (var j=0;j<array2[i].length ;j++ )
+for (var j=0;j<array22[j].length ;j++ )
             {
-for (var i=0;i<array22.length ;i++ )
+for (var k=0;k<array2[i].length ;k++ )
              {
-for (var j=0;j<array22[i].length ;j++ )
-             {
-document.writeln(array33[i][j]=array2[i][j]*array22[i][j]);
+document.writeln(array33[i][j]=array2[i][k]*array22[k][j]);
 }
+}document.writeln("<br/>");
 }
-}
-}
-
 </script>
 
 </body>
-</html>
