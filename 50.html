@@ -1,8 +1,12 @@
+
 <html>
 <body>
 
 <script type="text/javascript">
+
 var array2=[[3,2,1],[1,2,3]];
+var array11=[[0,0,0],[0,0,0]];
+var array33=[[0,0],[0,0]];
 var array22=new Array();
 array22[0]=new Array(2);
 array22[1]=new Array(2);
@@ -14,6 +18,7 @@ for(var i=0;i<array2.length;i++)
       array22[j][i]=array2[i][j];
       }
       }
+document.writeln("a:<br/>");
       for (var i=0;i<array2.length ;i++ )
         {
           for (var j=0;j<array2[i].length ;j++ )
@@ -22,7 +27,7 @@ for(var i=0;i<array2.length;i++)
               }
               document.writeln("<br/>");
              }
-             document.writeln("<br/><br/>转置后的数据：<br/>");
+             document.writeln("<br/><br/>b：<br/>");
              for (var i=0;i<array22.length ;i++ )
              {
              for (var j=0;j<array22[i].length ;j++ )
@@ -30,7 +35,37 @@ for(var i=0;i<array2.length;i++)
              document.writeln(array22[i][j]+"&nbsp");
              }
              document.writeln("<br/>");
-             } 
+             }
+
+
+document.writeln("<br/><br/>c:<br/>");
+
+
+      for (var i=0;i<array2.length ;i++ )
+        {
+          for (var j=0;j<array2[i].length ;j++ )
+            {
+              document.writeln(array11[i][j]=array2[i][j]+array2[i][j]);
+              }
+document.writeln("<br/>");
+             }
+
+document.writeln("<br/><br/>d:<br/>");
+
+for (var i=0;i<array2.length ;i++ )
+        {
+for (var j=0;j<array2[i].length ;j++ )
+            {
+for (var i=0;i<array22.length ;i++ )
+             {
+for (var j=0;j<array22[i].length ;j++ )
+             {
+document.writeln(array33[i][j]=array2[i][j]*array22[i][j]);
+}
+}
+}
+}
+
 </script>
 
 </body>
