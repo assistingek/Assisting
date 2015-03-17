@@ -6,9 +6,7 @@
 
 var array2=[[3,2,1],[1,2,3]];
 var array11=[[0,0,0],[0,0,0]];
-var array33=new Array();
-array33[0]=new Array(2);
-array33[1]=new Array(2);
+var array33=[[0,0],[0,0]];
 var array22=new Array();
 array22[0]=new Array(2);
 array22[1]=new Array(2);
@@ -60,7 +58,7 @@ for (var j=0;j<array22[j].length ;j++ )
             {
 for (var k=0;k<array2[i].length ;k++ )
              {
-document.writeln(array33[i][j]+=array2[i][k]*array22[k][j]);
+document.writeln(array33[i][j]=array2[i][k]*array22[k][j]);
 }
 }document.writeln("<br/>");
 }
