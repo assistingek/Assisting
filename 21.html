@@ -1,0 +1,83 @@
+<html>
+<body>
+
+<script type="text/javascript">
+function transpose(a)
+{
+   var x = [];
+   for(var j = 0; j < a[0].length; j++)
+   {
+      x[j] = [];
+	  for(var i = 0; i < a.length; i++)
+	  {
+	     x[j][i] = a[i][j];
+	  }
+   }
+   return x;
+}
+
+function add(a, b)
+{
+   var y = [];
+   for(var i = 0; i < a.length; i++)
+   {
+      y[i] = [];
+	  for(var j = 0; j < a[i].length; j++)
+	  {
+	     y[i][j] = a[i][j] + b[i][j];
+	  }
+   }
+   return y;
+}
+
+function times(a, b)
+{
+   var z = [];
+   for(var i = 0; i < a.length; i++)
+   {
+      z[i] = [];
+	  for(var j = 0; j < b[i].length; j++)
+	  {
+	     z[i][j] = 0;
+		 for(var k = 0; k < a[i].length; k++)
+		 {
+		    z[i][j] = z[i][j] + a[i][k] * b[k][j];
+	     }
+	  }
+   }
+   return z;
+}
+
+function show(a)
+{
+   for(var i = 0; i < a.length; i++)
+   {
+      var line="";
+      for(var j = 0; j < a[i].length; j++)
+      {
+         line = line + a[i][j] + " ";
+      }document.writeln("<br/>");
+      document.writeln(line);
+   }document.writeln("<br/>");
+}
+
+var a = [[3, 2, 1], [1, 2, 3]];
+var b = transpose(a);
+var c = add(a, a);
+var d = times(a, b);
+
+document.writeln("a :");
+document.writeln(show(a));
+document.writeln("<br/>");
+document.writeln("b :");
+document.writeln(show(b));
+document.writeln("<br/>");
+document.writeln("c :");
+document.writeln(show(c));
+document.writeln("<br/>");
+document.writeln("d :");
+document.writeln(show(d));
+</script>
+
+</body>
+<html>
