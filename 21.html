@@ -2,81 +2,84 @@
 <body>
 
 <script type="text/javascript">
-function transpose(a)
+
+var arrayA = [[3, 2, 1], [1, 2, 3]];
+var arrayB = transpose(arrayA);
+var arrayC = add(arrayA, arrayA);
+var arrayD = times(arrayA, arrayB);
+
+function transpose(arrayA)
 {
    var x = [];
-   for(var j = 0; j < a[0].length; j++)
+   for(var j = 0; j < arrayA[0].length; j++)
    {
       x[j] = [];
-	  for(var i = 0; i < a.length; i++)
+	  for(var i = 0; i < arrayA.length; i++)
 	  {
-	     x[j][i] = a[i][j];
+	     x[j][i] = arrayA[i][j];
 	  }
    }
    return x;
 }
+document.writeln("A :");
+document.writeln(show(arrayA));
+document.writeln("<br/>");
 
-function add(a, b)
+function add(arrayA, arrayB)
 {
    var y = [];
-   for(var i = 0; i < a.length; i++)
+   for(var i = 0; i < arrayA.length; i++)
    {
       y[i] = [];
-	  for(var j = 0; j < a[i].length; j++)
+	  for(var j = 0; j < arrayA[i].length; j++)
 	  {
-	     y[i][j] = a[i][j] + b[i][j];
+	     y[i][j] = arrayA[i][j] + arrayB[i][j];
 	  }
    }
    return y;
 }
 
-function times(a, b)
+document.writeln("B :");
+document.writeln(show(arrayB));
+document.writeln("<br/>");
+
+function times(arrayA, arrayB)
 {
    var z = [];
-   for(var i = 0; i < a.length; i++)
+   for(var i = 0; i < arrayA.length; i++)
    {
       z[i] = [];
-	  for(var j = 0; j < b[i].length; j++)
+	  for(var j = 0; j < arrayB[i].length; j++)
 	  {
 	     z[i][j] = 0;
-		 for(var k = 0; k < a[i].length; k++)
+		 for(var k = 0; k < arrayA[i].length; k++)
 		 {
-		    z[i][j] = z[i][j] + a[i][k] * b[k][j];
+		    z[i][j] = z[i][j] + arrayA[i][k] * arrayB[k][j];
 	     }
 	  }
    }
    return z;
 }
 
-function show(a)
+document.writeln("C :");
+document.writeln(show(arrayC));
+document.writeln("<br/>");
+
+function show(arrayA)
 {
-   for(var i = 0; i < a.length; i++)
+   for(var i = 0; i < arrayA.length; i++)
    {
       var line="";
-      for(var j = 0; j < a[i].length; j++)
+      for(var j = 0; j < arrayA[i].length; j++)
       {
-         line = line + a[i][j] + " ";
+         line = line + arrayA[i][j] + " ";
       }document.writeln("<br/>");
       document.writeln(line);
    }document.writeln("<br/>");
 }
 
-var a = [[3, 2, 1], [1, 2, 3]];
-var b = transpose(a);
-var c = add(a, a);
-var d = times(a, b);
-
-document.writeln("a :");
-document.writeln(show(a));
-document.writeln("<br/>");
-document.writeln("b :");
-document.writeln(show(b));
-document.writeln("<br/>");
-document.writeln("c :");
-document.writeln(show(c));
-document.writeln("<br/>");
-document.writeln("d :");
-document.writeln(show(d));
+document.writeln("D :");
+document.writeln(show(arrayD));
 </script>
 
 </body>
