@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<script type="text/javascript">
+var array2=[[3,2,1],[1,2,3]];
+var array22=new Array();
+array22[0]=new Array(2);
+array22[1]=new Array(2);
+array22[2]=new Array(2);
+for(var i=0;i<array2.length;i++)
+{
+  for(var j=0;j<array2[i].length;j++)
+    {
+      array22[j][i]=array2[i][j];
+      }
+      }
+      for (var i=0;i<array2.length ;i++ )
+        {
+          for (var j=0;j<array2[i].length ;j++ )
+            {
+              document.writeln(array2[i][j]+"&nbsp");
+              }
+              document.writeln("<br/>");
+             }
+             document.writeln("<br/><br/>转置后的数据：<br/>");
+             for (var i=0;i<array22.length ;i++ )
+             {
+             for (var j=0;j<array22[i].length ;j++ )
+             {
+             document.writeln(array22[i][j]+"&nbsp");
+             }
+             document.writeln("<br/>");
+             } 
+</script>
+
+</body>
+</html>
